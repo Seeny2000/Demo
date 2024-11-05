@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+</head>
+<body>
+    <h2>Your Cart</h2>
+
+    {% if cart %}
+        <ul>
+        {% for item in cart %}
+            <li>
+                {{ item['country'] }} - {{ item['place'] }} - {{ item['duration'] }} - {{ item['price'] }} 
+                <a href="{{ url_for('remove_from_fav', fav_item_index=loop.index0) }}">Remove</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Your Favorites is empty</p>
+    {% endif %}
+    <form>
+        <button type="submit" formaction="/userpage">Back</button>
+    </form>
+      

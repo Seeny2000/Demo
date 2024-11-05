@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABIBI HOLIDAYS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<!-- {% extends 'base.html' %}
+{% block title %}Remove User{% endblock %}
+{% block content %} -->
+<body>
+
+  <!-- header partition -->
+  <div style="background: rgb(255, 128, 0);
+  background: -webkit-linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);
+  background: -o-linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);
+  background: linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);; padding: 4px; text-align: center;display: flex;justify-content: flex-start;">
+    <a href="https://www.facebook.com/yourprofile" target="_blank">
+        <img src="/static/image/icons8-facebook-50.png" alt="Facebook" style="width: 30px; height: 30px; transform: translateY(5px);margin: 10px;">
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="/static/image/icons8-instagram-50.png" alt="Instagram" style="width: 30px; height: 30px; margin: 10px;transform: translateY(5px);">
+    </a>
+    <a href="mailto:youremail@example.com" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 16px; margin: 20px;">
+        habibiholidays@gmail.com
+    </a>
+</div>
+
+
+<!-- navbar -->
+
+
+    <nav class="navbar">
+      <div class="logo"><img src="/static/image/HABIBI HOLIDAYSt.png" alt="Logo"></div>
+      <ul class="nav-links">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/signin"><i class="fas fa-user-plus"></i> Sign Up</a></li> <!-- Sign Up Icon -->
+          <li><a href="/admin"><i class="fas fa-user-shield"></i> Admin</a></li> <!-- Admin Icon -->
+          <li class="dropdown">
+              <a href="#">Services</a>
+              <div class="dropdown-content">
+                  <a href="#">DUBAI</a>
+                  <a href="#">MALAYSIA</a>
+                  <a href="#">SINGAPORE</a>
+                  <a href="#">THAILAND</a>
+                  <a href="#">BALI</a>
+                  <a href="#">MALDIVES</a>
+              </div>
+          </li>
+      </ul>
+      <a href="/login"><button class="login-btn">Login</button></a>
+  </nav>
+  
+
+
+
+
+
+    <!-- carousel -->
+
+   
+   <!-- carousel -->
+<div class="carousel">
+    <button class="carousel-button prev">❮</button>
+    <div class="carousel-track">
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+            <div class="carousel-image-container">
+                <img src="/static/image/carou1.jpg" alt="Image 1" style="height: 580px; width: 100%;">
+                <div class="carousel-caption">
+                    <h2>JAPAN</h2>
+                    <p style="font-size: larger;">
+                        Price starts at ₹69,000* <br>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <div class="carousel-image-container">
+                <img src="/static/image/carou2.jpg" alt="Image 2" style="height: 580px; width: 100%;">
+                <div class="carousel-caption">
+                    <h2>SWITZERLAND</h2>
+                    <p style="font-size: larger;">
+                        Price starts at ₹1.00 lakhs* <br>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <div class="carousel-image-container">
+                <img src="/static/image/carou7.jpg" alt="Image 3" style="height: 580px; width: 100%;">
+                <div class="carousel-caption">
+                    <h2>CHINA</h2>
+                    <p style="font-size: larger;">
+                        Price starts at ₹1.20 lakhs* <br>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <div class="carousel-image-container">
+                <img src="/static/image/carou4.jpg" alt="Image 4" style="height: 580px; width: 100%;">
+                <div class="carousel-caption">
+                    <h2>INDIA</h2>
+                    <p style="font-size: larger;">
+                        Price starts at ₹30,000* <br>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-slide">
+            <div class="carousel-image-container">
+                <img src="/static/image/carou5.jpg" alt="Image 5" style="height: 580px; width: 100%;">
+                <div class="carousel-caption">
+                    <h2>DUBAI</h2>
+                    <p style="font-size: larger;">
+                        Price starts at ₹4.00 lakhs* <br>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-button next">❯</button>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+
+<!-- popular packages -->
+<div class="popular">
+  <div class="pop"><h1>Popular Packages</h1></div>
+  <div class="image-container1">
+    <img src="/static/image/pp1.jpg" alt="Popular Package" class="package-image">
+    <div class="indiatour">
+      <h2>India Tour Packages</h2>
+      <button>10 TOURS</button>
+    </div>
+  </div>
+
+
+
+  <div class="image-container1">
+    <img src="/static/image/pp2.jpg" alt="Popular Package" class="package-image" style="height: 500px;width: 600px;">
+    <div class="indiatour">
+      <h2>Dubai Tour Packages</h2>
+      <button>4 TOURS</button>
+    </div>
+  </div>
+
+
+
+<div class="image-container1">
+  <img src="/static/image/pp3.jpg" alt="Popular Package" class="package-image" style="height: 400px;width: 492px;">
+  <div class="indiatour">
+    <h2>Thailand Gang Packages</h2>
+    <button>69 TOURS</button>
+  </div>
+</div>
+
+
+
+<div class="image-container1">
+  <img src="/static/image/pp4.jpg" alt="Popular Package" class="package-image" style="height: 400px;width: 492px;">
+  <div class="indiatour">
+    <h2>Japan Tour Packages</h2>
+    <button>2 TOURS</button>
+  </div>
+</div>
+
+
+
+<div class="image-container1">
+  <img src="/static/image/pp5.jpg" alt="Popular Package" class="package-image" style="height: 400px;width: 492px;">
+  <div class="indiatour">
+    <h2>Maldives Honeymoon Packages</h2>
+    <button>9 TOURS</button>
+  </div>
+</div>
+</div>
+
+<!-- reviews -->
+
+<div class="wrapper">
+    <div class="review"><h1>Our Happy Clients</h1></div>
+    <div class="cols">
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev4.jpg)">
+                    <div class="inner">
+                        <p>Jerk Jaga</p>
+                        <span class="star-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>We booked our Maldives trip through "HABIBI HOLIDAYS" and spent 4 days and 3 nights at Sheraton Maldives Full Moon Resort & Spa. It was a great memorable experience.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev3.jpg)">
+                    <div class="inner">
+                        <p>Mighty Raju</p>
+                        <span class="star-rating">⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>The Habibi Holidays have various tour package options. I chose Goa and customized the tour. Kalpana assisted me throughout my trip. Booking was hassle-free. Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev2.jpg)">
+                    <div class="inner">
+                        <p> Bird Ravi</p>
+                        <span class="star-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>We went to Andaman Nicobar recently through Habibi holidays. It was one of the best experiences. We had an amazing journey by cruise to the islands. Thank you, Habibi holidays!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container3">
+              <div class="front" style="background-image: url(/static/image/rev1.jpg)">
+                  <div class="inner">
+                      <p>King Maha</p>
+                      <span class="star-rating">⭐⭐⭐⭐</span>
+                  </div>
+              </div>
+              <div class="back">
+                  <div class="inner">
+                      <p>We planned a trip to Thailand and Habibi Holidays were the best who made the holidays far better than we expected. we were given enough care.The hotels they arranged was quite good. </p>
+                  </div>
+              </div>
+          </div>
+      </article>
+      
+    </div>
+</div>
+
+<!-- footer section -->
+
+<footer class="footer">
+    <div>
+        <h3>Contact Us</h3>
+        <p>Address: Habibi Holidays Pvt LTD,
+          No.1, Gemini Parsn,
+          Kodambakkam High Road,
+          Nungambakkam, Chennai – 600006
+          Tamilnadu, India.</p>
+        <p>Call Us: (123) 456-7890</p>
+    </div>
+    <div class="branches">
+        <h3>Branches</h3>
+        <p>Mumbai</p>
+        <p>Bangalore</p>
+        <p>Hyderabad</p>
+        <p>Erode</p>
+        <p>Coimbatore</p>
+        
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <div class="social-icons" style="transform: translateY(20px);">
+          <a href="https://facebook.com" target="_blank">
+              <img src="/static/image/icons8-facebook-50.png" alt="Facebook" style="width: 50px; height: 50px; margin: 0 0px;">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+              <img src="/static/image/icons8-instagram-50.png" alt="Instagram" style="width: 50px; height: 50px; margin: 0 10px;">
+          </a>
+        </div>
+    </div>
+</footer>
+<!-- {% endblock %} -->
+</body>
+</html>

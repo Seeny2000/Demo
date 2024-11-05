@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sample2.css') }}">
+    <title>userpage</title>
+</head>
+<body>
+
+      <!-- header partition -->
+  <div style="background: rgb(255, 128, 0);
+  background: -webkit-linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);
+  background: -o-linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);
+  background: linear-gradient(45deg,  #ffc400 10%,rgb(255, 128, 0) 100%);; padding: 4px; text-align: center;display: flex;justify-content: flex-start;">
+    <a href="https://www.facebook.com/yourprofile" target="_blank">
+        <img src="/static/image/icons8-facebook-50.png" alt="Facebook" style="width: 30px; height: 30px; transform: translateY(5px);margin: 10px;">
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="/static/image/icons8-instagram-50.png" alt="Instagram" style="width: 30px; height: 30px; margin: 10px;transform: translateY(5px);">
+    </a>
+    <a href="mailto:youremail@example.com" style="color: rgb(0, 0, 0); text-decoration: none; font-size: 16px; margin: 20px;">
+        habibiholidays@gmail.com
+    </a>
+</div>
+    
+
+<!-- navbar -->
+
+<div class="navbar">
+    <button id="menu-toggle" class="menu-icon">☰</button>
+    <div class="habibi">
+        <div><img src="/static/image/HABIBI HOLIDAYSt.png"></div>
+    </div>
+    <div class="heading"><h1>HABIBI HOLIDAYS</h1></div>
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button type="button">Search</button>
+    </div>
+</div>
+<div class="sidebar" id="sidebar">
+    <div class="user-greeting">Hello, Username</div>
+    <nav class="nav-menu">
+        <a href="#">My Plans</a>
+        <a href="/fav">My Favourite</a>
+        <a href="#">Update Password</a>
+        <a href="/cart">My Cart</a>
+        <a href="/userlogout">Log Out</a>
+    </nav>
+    
+</div>
+
+
+
+<!-- product card -->
+
+<div class="pack"><h1>Packages</h1></div>
+    <div class="card-container">
+        
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/card1.jpg" alt="Product Image 1">
+                <img src="/static/image/rev4.jpg" alt="Product Image 2">
+                <img src="/static/image/rev2.jpg" alt="Product Image 3">
+                <img src="/static/image/rev3.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <!-- <h2>THAILAND</h2>
+                <p>Bankok & James Bond Island Tour.<br> Duration : 4 Days 3 Nights</p>
+                <p class="price">₹69,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <a href="{{ url_for('thai') }}"><button class="add-to-cart-button" >Add to cart</button></a>
+                    <button class="buy-now-button">Buy Now</button>
+                </div> -->
+                <form action="#" method="POST">
+                    <label for="country">Country:</label>
+                    <input type="text" name="country" value="France" readonly required><br>
+                
+                    <label for="place">Place:</label>
+                    <input type="text" name="place" value="Paris" readonly required><br>
+                
+                    <label for="duration">Duration:</label>
+                    <input type="text" name="duration" value="5 Days" readonly required><br>
+                
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" value="2000" readonly required><br>
+                
+                    <a href="/add_to_cart"><button type="submit">Add to Cart</button></a>
+                    <a href="/add_to_fav"><button type="submit">Add to favourites</button></a>
+                </form>
+                
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/card2.jpg" alt="Product Image 1">
+                <img src="/static/image/card3.jpg" alt="Product Image 2">
+                <img src="/static/image/card4.jpg" alt="Product Image 3">
+                <img src="/static/image/card5.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>SWITZERLAND</h2>
+                <p>Wonders Of Italy & Swiss.<br>Duration : 3 Days 2 Nights</p>
+                <p class="price">₹1,50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/card6.jpg" alt="Product Image 1">
+                <img src="/static/image/card7.jpg" alt="Product Image 2">
+                <img src="/static/image/card8.jpg" alt="Product Image 3">
+                <img src="/static/image/card9.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>PARIS</h2>
+                <p>Treasure Of Europe.<br> Duration : 6 Days 5 Nights</p>
+                <p class="price">₹2,50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/aus1.jpg" alt="Product Image 1">
+                <img src="/static/image/aus2.jpg" alt="Product Image 2">
+                <img src="/static/image/aus3.jpg" alt="Product Image 3">
+                <img src="/static/image/aus4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>AUSTRIA</h2>
+                <p>Stunning Vienna.<br> Duration : 6 Days 5 Nights</p>
+                <p class="price">₹2,00,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/bali1.jpg" alt="Product Image 1">
+                <img src="/static/image/bali2.jpg" alt="Product Image 2">
+                <img src="/static/image/bali3.jpg" alt="Product Image 3">
+                <img src="/static/image/bali4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>BALI</h2>
+                <p>Bali With Komodo Island.<br> Duration : 7 Days 6 Nights</p>
+                <p class="price">₹1,50,000*</p>
+                
+<div class="star-rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+</div>
+
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/dub1.jpg" alt="Product Image 1">
+                <img src="/static/image/dub2.jpg" alt="Product Image 2">
+                <img src="/static/image/dub3.jpg" alt="Product Image 3">
+                <img src="/static/image/dub4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>DUBAI</h2>
+                <p>Adventure Desert Safari Tour.<br> Duration : 3 Days 2 Nights</p>
+                <p class="price">₹1,50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/aust1.jpg" alt="Product Image 1">
+                <img src="/static/image/aust2.jpg" alt="Product Image 2">
+                <img src="/static/image/aust3.jpg" alt="Product Image 3">
+                <img src="/static/image/aust4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>AUSTRALIA</h2>
+                <p>Romantic Australia.<br> Duration : 11 Days 10 Nights</p>
+                <p class="price">₹3,50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/shim1.jpg" alt="Product Image 1">
+                <img src="/static/image/shim2.jpg" alt="Product Image 2">
+                <img src="/static/image/shim3.jpg" alt="Product Image 3">
+                <img src="/static/image/shim4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>SHIMLA-INDIA</h2>
+                <p>Best Shimla Manali Tour.<br> Duration : 7 Days 6 Nights</p>
+                <p class="price">₹50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/afri1.jpg" alt="Product Image 1">
+                <img src="/static/image/afre2.jpg" alt="Product Image 2">
+                <img src="/static/image/afri3.jpg" alt="Product Image 3">
+                <img src="/static/image/afri4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>SOUTH AFRICA</h2>
+                <p>Discover The Beauty Of Africa.<br> Duration : 6 Days 5 Nights</p>
+                <p class="price">₹2,00,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/gree1.jpg" alt="Product Image 1">
+                <img src="/static/image/gree2.jpg" alt="Product Image 2">
+                <img src="/static/image/gree3.jpg" alt="Product Image 3">
+                <img src="/static/image/gree4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>GREECE</h2>
+                <p>Greece HoneyMoon Package.<br> Duration : 6 Days 5 Nights</p>
+                <p class="price">₹2,00,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/spa3.jpg" alt="Product Image 1">
+                <img src="/static/image/spa2.jpg" alt="Product Image 2">
+                <img src="/static/image/spa1.jpg" alt="Product Image 3">
+                <img src="/static/image/spa4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>SPAIN</h2>
+                <p>Andalucia White Village Tour.<br> Duration : 8 Days 7 Nights</p>
+                <p class="price">₹3,00,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+         <div class="product-card">
+            <div class="carousel">
+                <button class="prev-button">❮</button>
+                <img src="/static/image/mala1.jpg" alt="Product Image 1">
+                <img src="/static/image/mala2.jpg" alt="Product Image 2">
+                <img src="/static/image/mala3.jpg" alt="Product Image 3">
+                <img src="/static/image/mala4.jpg" alt="Product Image 3">
+                <button class="next-button">❯</button>
+            </div>
+            <div class="product-details">
+                <h2>MALAYSIA</h2>
+                <p>Malaysia HoneyMoon Packages.<br> Duration : 6 Days 5 Nights</p>
+                <p class="price">₹1,50,000*</p>
+                <div class="star-rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="buttons">
+                    <button class="favorite-button">❤️</button>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat product cards as needed -->
+    </div>
+
+    <script>
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach((card) => {
+            let currentIndex = 0;
+            const images = card.querySelectorAll('.carousel img');
+            const prevButton = card.querySelector('.prev-button');
+            const nextButton = card.querySelector('.next-button');
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            }
+
+            showImage(currentIndex); // Initialize the first image
+
+            nextButton.addEventListener('click', nextImage);
+            prevButton.addEventListener('click', prevImage);
+
+            setInterval(nextImage, 3000); // Change image every 3 seconds
+        });
+
+
+
+
+
+//  favourite button //
+
+        const favoriteButtons = document.querySelectorAll('.favorite-button');
+        favoriteButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                
+                // Add heart animation
+                button.classList.add('heart-animation');
+                setTimeout(() => {
+                    button.classList.remove('heart-animation');
+                }, 600); // Duration of the animation
+
+                // Tooltip functionality
+                const tooltip = document.createElement('span');
+                tooltip.classList.add('tooltip');
+                tooltip.innerText = button.classList.contains('active') ? 'Added to Favorites!' : 'Removed from Favorites!';
+                button.appendChild(tooltip);
+
+                // Remove tooltip after a short delay
+                setTimeout(() => {
+                    button.removeChild(tooltip);
+                }, 2000);
+            });
+        });
+
+
+
+// add to cart button //
+
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+        addToCartButtons.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                // Ripple effect
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                button.appendChild(ripple);
+                
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${event.clientX - rect.left - size / 2}px`;
+                ripple.style.top = `${event.clientY - rect.top - size / 2}px`;
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600); // Duration of ripple animation
+
+                // Cart animation
+                button.classList.add('cart-animation');
+                setTimeout(() => {
+                    button.classList.remove('cart-animation');
+                }, 600); // Duration of the bounce animation
+
+                // Success message
+                const successMessage = document.createElement('span');
+                successMessage.classList.add('success-message');
+                successMessage.innerText = 'Added to Cart!';
+                button.appendChild(successMessage);
+                
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 2000); // Message duration
+            });
+        });
+
+
+
+//  sidebar //
+        
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        // Function to show sidebar
+        function showSidebar() {
+            sidebar.classList.add('active');
+        }
+
+        // Function to hide sidebar
+        function hideSidebar() {
+            sidebar.classList.remove('active');
+        }
+
+        // Event listeners
+        menuToggle.addEventListener('click', showSidebar);
+        sidebar.addEventListener('mouseleave', hideSidebar);
+        sidebar.addEventListener('mouseenter', showSidebar);
+
+
+
+    </script>
+
+
+
+
+<!-- review  -->
+
+<div class="wrapper">
+    <div class="review"><h1>Our Happy Clients</h1></div>
+    <div class="cols">
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev4.jpg)">
+                    <div class="inner">
+                        <p>Suresh</p>
+                        <span class="star-rating1">⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>We booked our Maldives trip through "HABIBI HOLIDAYS" and spent 4 days and 3 nights at Sheraton Maldives Full Moon Resort & Spa. It was a great memorable experience.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev3.jpg)">
+                    <div class="inner">
+                        <p>Naai Sekar</p>
+                        <span class="star-rating1">⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>The Habibi Holidays have various tour package options. I chose Goa and customized the tour. Kalpana assisted me throughout my trip. Booking was hassle-free. Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container3">
+                <div class="front" style="background-image: url(/static/image/rev2.jpg)">
+                    <div class="inner">
+                        <p> Bad Bala</p>
+                        <span class="star-rating1">⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>We went to Andaman Nicobar recently through Habibi holidays. It was one of the best experiences. We had an amazing journey by cruise to the islands. Thank you, Habibi holidays!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container3">
+              <div class="front" style="background-image: url(/static/image/rev1.jpg)">
+                  <div class="inner">
+                      <p>Kokki Kumar</p>
+                      <span class="star-rating1">⭐⭐⭐⭐</span>
+                  </div>
+              </div>
+              <div class="back">
+                  <div class="inner">
+                      <p>We planned a trip to Thailand and Habibi Holidays were the best who made the holidays far better than we expected. we were given enough care.The hotels they arranged was quite good. </p>
+                  </div>
+              </div>
+          </div>
+      </article>
+      
+    </div>
+</div>
+
+<!-- --------------------footer------------- -->
+<footer class="footer">
+    <div>
+        <h3>Contact Us</h3>
+        <p>Address: Habibi Holidays Pvt LTD,
+          No.1, Gemini Parsn,
+          Kodambakkam High Road,
+          Nungambakkam, Chennai – 600006
+          Tamilnadu, India.</p>
+        <p>Call Us: (123) 456-7890</p>
+    </div>
+    <div class="branches">
+        <h3>Branches</h3>
+        <p>Mumbai</p>
+        <p>Bangalore</p>
+        <p>Hyderabad</p>
+        <p>Erode</p>
+        <p>Coimbatore</p>
+        
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <div class="social-icons" style="transform: translateY(20px);">
+          <a href="https://facebook.com" target="_blank">
+              <img src="/static/image/icons8-facebook-50.png" alt="Facebook" style="width: 50px; height: 50px; margin: 0 0px;">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+              <img src="/static/image/icons8-instagram-50.png" alt="Instagram" style="width: 50px; height: 50px; margin: 0 10px;">
+          </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

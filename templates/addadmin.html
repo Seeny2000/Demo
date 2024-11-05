@@ -1,0 +1,21 @@
+<html></html>
+<title>Login form</title>
+{% extends 'base.html' %}
+{% block title %}Signup{% endblock %}
+{% block content %}
+<body>
+    <h2>Add New Admin </h2>
+    <form method="POST" action="/addadmin">
+        <label for="username">Enter Email-id:</label><br>
+        <input type="text" id="username" name="username" required ><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit" action="/addadmin" required></form>
+        <form>
+        <button type="submit" formaction="/admindashboard">Back to Dashboard</button><br><br>
+      
+
+    </form>
+    {% endblock %}
+</body>
+</html>

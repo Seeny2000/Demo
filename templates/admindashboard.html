@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <style>
+     
+    a{
+        text-decoration: none;
+    }
+   </style>
+</head>
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<body>
+<h1><a href="/addadmin">Add admin</a></h1>
+<h1><a href="/removeadmin">Remove admin</a></h1>
+<h1><a href="/updatepassword">Update Password</a></h1>
+<h1><a href="/admin/Current plans.html">Current Plans</a></h1>
+<h1><a href="/admin/all plans.html">All Plans</a></h1>
+<h1><a href="/logout">Logout</a></h1>
+</body>
+{% endblock %}
+</html>
